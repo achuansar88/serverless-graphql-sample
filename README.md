@@ -8,28 +8,26 @@ and confiure serverless
 
 Clone this project 
 
-# Change into the newly created directory 
+###### Change into the newly created directory 
 cd severless-graphql-sample
 
-# install all dependencies
+###### install all dependencies
 npm install
 
-# Note: You can delete first.js  and second.js file if needed or work with same
-
-# To install appolo server lamda and graphql
+###### To install appolo server lamda and graphql
 npm install apollo-server-lambda graphql
 
-# To run the lamda offline
+###### To run the lamda offline
 npm install serverless-offline
 
-# To start locally
+###### To start locally
 sls offline start
 
-# To deploy it in AWS 
+###### To deploy it in AWS 
 sls deploy --stage stage
 
-# create a .env file and add the following values 
-# Note change vales as per your details
+###### create a .env file and add the following values 
+###### Note change vales as per your details
 
 ```
 dev:
