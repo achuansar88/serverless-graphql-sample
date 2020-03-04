@@ -1,13 +1,12 @@
 # severless-graphql-sample
 Using serverless nodejs in graphql with postgress SQL
 
-# create a serverless project
+create a serverless project
 npm install -g serverless
 
 and confiure serverless
 
-# Clone the project 
-Clone the project
+Clone this project 
 
 # Change into the newly created directory 
 cd severless-graphql-sample
@@ -32,6 +31,7 @@ sls deploy --stage stage
 # create a .env file and add the following values 
 # Note change vales as per your details
 
+```
 dev:
   APP_NAME: severless-graphql-sample
   NODE_ENVIRONMENT: dev
@@ -41,7 +41,9 @@ dev:
   DATABASE: your database  
   SECURITY_GROUP_ID: security group id
   SUBNET_1: subnet 1 
-  SUBNET_2: subnet 2
+  SUBNET_2: subnet 
+  
+  ```
 
 
 
