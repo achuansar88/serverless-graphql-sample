@@ -1,0 +1,47 @@
+service:
+  name: sererless-graphql-sample
+# app and org for use with dashboard.serverless.com
+#app: your-app-name
+#org: your-org-name
+
+# Add the serverless-webpack plugin
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  iamRoleStatements:
+  - Effect: 'Allow'
+    Action:
+      - 'lambda:InvokeFunction'
+    Resource: "*"
+  region: us-east-1
+  #security group and subnet fro rds connection 
+  vpc:
+      securityGroupIds:
+        - ${file(./env.yml):${self:provider.stage}.SECURITY_GROUP_ID}
+      subnetIds:
+        - ${file(./env.yml):${self:provider.stage}.SUBNET_1}
+        - ${file(./env.yml):${self:provider.stage}.SUBNET_2}
+  # To load environment variables externally
+  # rename env.example to env.yml and uncomment
+  # the following line. Also, make sure to not
+  # commit your env.yml.
+  #
+  environment: ${file(./env.yml):${self:provider.stage}}
+
+functions:
+  graphQlServer:
+    handler: graphQlServer.graphQlServer
+    events:
+      - http:
+          path: graphql
+          method: post
+          cors: true
+      - http:
+          path: graphql
+          method: get
+          cors: true  
