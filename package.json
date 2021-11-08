@@ -17,7 +17,7 @@
   "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
   "license": "MIT",
   "dependencies": {
-    "apollo-server": "^2.10.1",
+    "apollo-server": "^2.25.3",
     "apollo-server-lambda": "^2.10.1",
     "graphql": "^14.6.0",
     "pg": "^7.18.2",
