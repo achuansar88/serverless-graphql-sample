@@ -23,7 +23,7 @@
     "pg": "^7.18.2",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.5",
-    "serverless-offline": "^6.0.0-alpha.67",
+    "serverless-offline": "^12.0.4",
     "webpack-node-externals": "^1.7.2"
   }
 }
